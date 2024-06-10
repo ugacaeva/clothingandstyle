@@ -1,0 +1,765 @@
+body {
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(198, 198, 198, 0.8) ), url('img/icons/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    font-family: "BebasNeue Book";
+    background-color: #333;    
+    color: #f0f0f0;
+    padding: 10px;
+}
+
+.headline {
+    background-color: #333;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.logo {
+    display: inline-block;
+    margin-right: 20px;
+    width: 60%;
+}
+.logo img {
+    width: 10%;
+    vertical-align: middle;
+}
+.logo h1 {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.contact-info {
+    display: flex; 
+    width: 40%;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+}
+.contact-info img {
+    width: 20px;
+    cursor: pointer;
+}
+.contact-info p{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Мобильное меню */
+.menu-toggle {
+    display: none;
+    background-color: #333;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+#mobile-nav {
+    display: none; 
+    flex-direction: column;
+}
+#mobile-nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+#mobile-nav ul li {
+    text-align: center;
+    margin: 0;
+    padding: 2px;
+}
+#mobile-nav ul li a {
+    display: block;
+    padding: 5px 0;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+#mobile-nav ul li a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Меню навигации */
+nav { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+} 
+ 
+nav ul { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+} 
+ 
+nav ul li { 
+    margin-right: 10px; 
+} 
+ 
+nav ul li a { 
+    font-size: large;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    color: #f0f0f0; 
+    transition: background-color 0.3s, color 0.3s; 
+} 
+nav ul li a:hover { 
+    background-color: #f0f0f0; 
+    color: #333;
+} 
+
+/* Модальное окно с контактами */
+.modal {
+    font-family: "BebasNeue Book";
+    display: none;    
+    position: fixed;
+    z-index: 1;    
+    left: 0;
+    top: 0;    
+    width: 100%;
+    height: 100%;    
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); 
+}
+.modal-content {
+    background-color: #f0f0f0;    
+    margin: 15% auto;
+    padding: 20px;    
+    border: 1px solid #888;
+    width: 80%;    
+    max-width: 600px;
+    border-radius: 5px;
+}
+.modal-content img {
+    width: 5%;
+    height: auto;
+}
+.close {
+    color: #888;    
+    float: right;
+    font-size: 28px;    
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: #333;    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для баннера */
+.banner {    
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px;
+    position: relative;
+    background-size: cover;    
+    background-position: center;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+.banner-overlay {    
+    position: absolute;
+    top: 0;    
+    left: 0;
+    width: 100%;    
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+}
+.banner-content {
+    color: #f0f0f0; 
+}
+.banner-content title {
+    margin-bottom: 20px;
+}
+.banner-content h3 {
+    font-size: 36px;
+}
+.banner-content h2 {
+    font-size: 50px;
+}
+.banner-content p {    
+    font-size: 24px; 
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-decoration:overline;
+}
+.banner-content .btn {
+    display: inline-block;    
+    padding: 15px 30px;
+    background-color: #f1e1ca; 
+    color: #333;
+    text-decoration: none;    
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight:bolder;
+}
+.banner-content .btn:hover {
+    background-color: #e6b49d; 
+}
+
+/* Стили для каталога товаров */
+.new-products {
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px;
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+.new-products .title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+.products-container {
+    display: flex;    
+    justify-content: center; 
+    align-items: stretch;
+    flex-wrap: wrap; 
+}
+
+/* Карточка товара */
+.product {
+    font-family: "BebasNeue Book";
+    background-color: #f0f0f0;   
+    transition: background-color 0.3s;  
+    width: calc(20.33% - 10px); 
+    margin: 0 10px 20px; 
+    padding: 10px;    
+    border: 1px solid #ccc;
+    text-align: left; 
+}
+.product:hover {
+    background-color: #f1e1ca;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+.product-info {
+    padding: 10px 0; 
+}
+.product-info h2 {
+    margin: 0;    
+    font-size: 18px; 
+}
+.product-info .price {
+    bottom: 0;
+    right: 0;
+    text-align: right;    
+    font-weight: bold; 
+}
+
+/* Стили катлога */
+.catalog {
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px;
+    padding: 10px;
+}
+.catalog .title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+.catalog-container {
+    display: flex;
+    padding: 5px;
+}
+.category-container {
+    display: inline;
+    width: 80%;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.category {    
+    margin-bottom: 40px; 
+    position: relative; 
+}
+.category h2 {
+    margin-left: 10px;    
+    text-align: left; 
+    font-size: 24px;
+    color: #333;
+}
+.products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    display: flex;    
+    flex-wrap: wrap; 
+}
+
+/* Стили для поиска и сортировки */
+.search-bar { 
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: normal;
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    width: 20%;
+}
+.search-container {
+    background-color: rgba(255, 255, 255, 0.215);   
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
+    padding: 10px;
+    display: inline-block;
+}
+.price-filter {
+    display: flex;
+    align-items: stretch;
+}
+
+#search-input,
+#category-select,
+#price-from,
+#price-to {   
+    margin-bottom: 10px;
+    width: 100%;    
+    padding: 5px;
+    box-sizing: border-box;    
+    border: 1px solid #ccc;
+    border-radius: 5px;    
+}
+#price-search-btn {    
+    background-color: #f1e1ca;
+    color: #333;    
+    border: none;
+    padding: 10px 20px;    
+    border-radius: 5px;
+    cursor: pointer;    
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+#price-search-btn:hover {
+    background-color: #e6b49d;
+}
+
+
+/* Стили для модального окна карточки товара */
+.product-modal {
+    font-family: "BebasNeue Book";
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;    
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.product-modal-content { 
+    background: #f0f0f0;
+    margin: 10% auto; 
+    padding: 20px; 
+    border: 1px solid #888; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    border-radius: 5px; 
+    height: 50%; 
+    width: 40%;
+    overflow: auto; 
+}
+.product-modal-content img { 
+    width: auto; 
+    height: 100%;  
+    float: left; 
+    vertical-align: middle; 
+    margin-right: 20px;
+}
+.product-modal-content h1  {
+    letter-spacing: 2px; 
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+.product-modal-content p { 
+    font-size: 16px; 
+    color: #494949; 
+    margin-bottom: 10px; 
+} 
+.product-modal-content h3 { 
+    text-align: right; 
+    font-size: 18px;
+}
+.product-modal-content h2 {
+    text-align: right; 
+    font-weight: bold;
+    font-size: 24px; 
+}
+
+/* Преимущества */
+.advantages {   
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px; 
+    text-align: center;
+    margin-bottom: 10px;    
+}
+.advantages .title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+.advantages-container {
+    position: relative;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url('img/icons/advantages.jpg'); 
+    background-size: cover;    
+    background-position: center;
+    padding: 50px 0;
+}
+.advantages-container::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.adv {
+    position: relative;
+    width: calc(33.33% - 20px);     
+    margin: 0 10px 20px;
+    padding: 20px;    
+    border: 1px solid #f0f0f0;
+    text-align: left;    
+    z-index: 1;
+}
+.adv p {    
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+/* Блок 'О нас' на главной странцие */
+.about-us { 
+    font-family: "BebasNeue Book";
+    padding: 10px;
+} 
+.about-us .title {
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    text-align: center;
+}
+.container { 
+    display: flex; 
+    align-items: stretch;
+} 
+.about-us-info { 
+    width: 60%; 
+} 
+.about-us-info h2 { 
+    letter-spacing: 2px;
+    font-size: 24px; 
+    margin-bottom: 20px; 
+} 
+.about-us-info p { 
+    font-family: "Montserrat Regular";
+    font-size: 18px; 
+    color: #555; 
+} 
+.about-us-contact { 
+    width: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/icons/about_us.jpg');
+    background-size: cover;
+} 
+.about-us-contact .text {  
+    position: relative;
+    z-index: 1; 
+    text-align: center; 
+    color: #f0f0f0; 
+}
+.text h3 { 
+    font-size: 36px;  
+} 
+.contact-us-btn { 
+    display: inline-block; 
+    padding: 15px 30px; 
+    background-color: #f1e1ca; 
+    color: #333; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+} 
+.contact-us-btn:hover { 
+    background-color: #e6b49d; 
+}
+
+/* Страница О нас */
+.about-shop {
+    font-family: "BebasNeue Book";
+    padding: 10px;
+}
+.about-shop .title {
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    text-align: center;
+}
+.about-shop-info {
+    margin-bottom: 10px;
+    position: relative;
+}
+.about-shop-info h2 {
+    letter-spacing: 2px;
+    color: #333;
+    font-size: 24px;    
+    margin-bottom: 20px;
+}
+.about-shop-info p {  
+    font-family: "Montserrat Regular";  
+    font-size: 18px;
+    color: #555;}
+
+.contact-shop {    
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.contact-shop-text {
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px;
+    text-align: center;
+}
+.contact-shop-text h2 {
+    color: #333;
+    font-size: 24px;    
+    margin-bottom: 20px;
+}
+
+.contact-shop-banner {
+    font-family: "BebasNeue Book";
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 50px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-shop-banner .contact-background {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-image: url('img/icons/contact-shop.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+.contact-shop-banner .contact-background::after { 
+    content: ''; 
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);  
+} 
+.contact-shop-btn { 
+    display: inline-block;
+    position: relative;
+    z-index: 1;  
+    padding: 15px 30px; 
+    background-color: #f1e1ca; 
+    color: #333; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+} 
+.contact-shop-btn:hover { 
+    background-color: #e6b49d; 
+}
+
+/* Подвал */
+footer {
+    font-family: "BebasNeue Book";
+    background-color: #333;    
+    color: #f0f0f0;
+    padding: 20px;
+}
+.contact {
+    margin: 0 20px;
+}
+.contact img {
+    width: 4%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+    
+    .headline {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .logo img {
+        width: 20%;
+    }
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .contact-info {
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+    nav {
+        display: none;
+    }
+
+    .banner-content h3 {
+        font-size: 28px;
+    }
+    .banner-content h2 {
+        font-size: 36px;
+    }
+    .banner-content p {
+        font-size: 18px;
+    }
+    .banner .btn {
+        margin-top: 4px;
+    }
+
+    .products-container {
+        display: flex;    
+        justify-content: center; 
+        align-items: stretch;
+        flex-wrap: wrap; 
+    }
+    .product {  
+        width: calc(40.33% - 5px); 
+        margin: 0 5px 10px;    
+        border: 1px solid #ccc;
+        text-align: left; 
+    }
+
+    .catalog-container {
+        flex-direction: column;
+    }
+    .category-container {
+        width: 100%;
+        margin: 0;
+    }
+    .category {
+        display: flex;    
+        justify-content: center; 
+        align-items: stretch;
+        flex-wrap: wrap; 
+        flex-direction: row;
+    }
+    .catalog .product {  
+        padding: auto;
+        width: calc(40.33% - 2px); 
+        margin: 2px;    
+        border: 1px solid #ccc;
+        text-align: left; 
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #search-input,
+    #category-select,
+    #price-from,
+    #price-to {
+        width: 95%;
+        margin: 5px auto;
+    }
+
+    .product-modal-content {
+        width: 50%;
+        margin: 20% auto;
+        height: auto;
+    }
+    .product-modal-content img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .advantages-container {
+        padding: 20px 0;
+    }
+    .adv {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    .about-us-info, .about-us-contact {
+        width: 100%;
+    }
+    .contact-us-btn {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+    .contact img {
+        width: 10%;
+    }
+}
+
+@font-face {
+    font-family: "BebasNeue Book";
+    src: url("fonts/BebasNeue_Book.ttf");
+}
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("fonts/Montserrat_Regular.ttf");
+}
