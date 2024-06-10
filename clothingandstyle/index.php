@@ -34,7 +34,7 @@
         <!-- Мобильное меню -->
         <nav id="mobile-nav">
             <ul>
-                <<li><a href="catalog.php#female-category">Для женщин</a></li> 
+                <li><a href="catalog.php#female-category">Для женщин</a></li> 
                 <li><a href="catalog.php#male-category">Для мужчин</a></li> 
                 <li><a href="catalog.php#acc-category">Аксессуары</a></li> 
                 <li><a href="index.php#new-products">Новинки</a></li>
